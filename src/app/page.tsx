@@ -72,6 +72,7 @@ export default function Home() {
         },
         body: JSON.stringify({ cityName: cityName }),
       });
+      // console.log(res);
       const data: TCurrentWeather | TMessage = await res.json();
       if (res.status === 406) {
         setCurrentWeather(undefined);
